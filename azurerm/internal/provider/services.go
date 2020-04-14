@@ -38,7 +38,7 @@ import (
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/logic"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/machinelearning"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedapplications"
-	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedapplications"
+	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedservices"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managementgroup"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/maps"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/mariadb"
@@ -113,6 +113,7 @@ func SupportedServices() []common.ServiceRegistration {
 		logic.Registration{},
 		machinelearning.Registration{},
 		managedapplications.Registration{},
+		managedservices.Registration{},
 		managementgroup.Registration{},
 		maps.Registration{},
 		mariadb.Registration{},

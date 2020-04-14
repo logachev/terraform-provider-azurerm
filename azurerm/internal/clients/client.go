@@ -42,7 +42,7 @@ import (
 	logic "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/logic/client"
 	machinelearning "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/machinelearning/client"
 	managedapplication "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedapplications/client"
-	managedservice "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedservices/client"
+	managedservices "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedservices/client"
 	managementgroup "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managementgroup/client"
 	maps "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/maps/client"
 	mariadb "github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/mariadb/client"
@@ -120,7 +120,7 @@ type Client struct {
 	Logic              *logic.Client
 	MachineLearning    *machinelearning.Client
 	ManagedApplication *managedapplication.Client
-	ManagedService 	   *managedservice.Client
+	ManagedServices    *managedservices.Client
 	ManagementGroups   *managementgroup.Client
 	Maps               *maps.Client
 	MariaDB            *mariadb.Client
@@ -199,7 +199,7 @@ func (client *Client) Build(ctx context.Context, o *common.ClientOptions) error 
 	client.Logic = logic.NewClient(o)
 	client.MachineLearning = machinelearning.NewClient(o)
 	client.ManagedApplication = managedapplication.NewClient(o)
-	client.ManagedService = managedservice.NewClient(o)
+	client.ManagedServices = managedservices.NewClient(o)
 	client.ManagementGroups = managementgroup.NewClient(o)
 	client.Maps = maps.NewClient(o)
 	client.MariaDB = mariadb.NewClient(o)
