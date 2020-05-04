@@ -37,6 +37,7 @@ import (
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/loganalytics"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/logic"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/machinelearning"
+	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/maintenance"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedapplications"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managedservices"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/managementgroup"
@@ -62,6 +63,7 @@ import (
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/resource"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/search"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/securitycenter"
+	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/sentinel"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/servicebus"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/servicefabric"
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/signalr"
@@ -73,7 +75,7 @@ import (
 	"github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/web"
 )
 
-//go:generate go run ../tools/website-categories/main.go -path=../../../website/allowed-subcategories
+//go:generate go run ../tools/generator-services/main.go -path=../../../
 
 func SupportedServices() []common.ServiceRegistration {
 	return []common.ServiceRegistration{
@@ -112,6 +114,7 @@ func SupportedServices() []common.ServiceRegistration {
 		loganalytics.Registration{},
 		logic.Registration{},
 		machinelearning.Registration{},
+		maintenance.Registration{},
 		managedapplications.Registration{},
 		managedservices.Registration{},
 		managementgroup.Registration{},
@@ -137,6 +140,7 @@ func SupportedServices() []common.ServiceRegistration {
 		resource.Registration{},
 		search.Registration{},
 		securitycenter.Registration{},
+		sentinel.Registration{},
 		servicebus.Registration{},
 		servicefabric.Registration{},
 		signalr.Registration{},
