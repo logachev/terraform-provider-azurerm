@@ -127,6 +127,7 @@ type Client struct {
 	MachineLearning       *machinelearning.Client
 	Maintenance           *maintenance.Client
 	ManagedApplication    *managedapplication.Client
+	ManagedServices       *managedservices.Client
 	ManagementGroups      *managementgroup.Client
 	Maps                  *maps.Client
 	MariaDB               *mariadb.Client
@@ -160,7 +161,6 @@ type Client struct {
 	Sql                   *sql.Client
 	TrafficManager        *trafficManager.Client
 	Web                   *web.Client
-	ManagedServices    *managedservices.Client
 }
 
 // NOTE: it should be possible for this method to become Private once the top level Client's removed
